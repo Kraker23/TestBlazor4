@@ -26,7 +26,7 @@ jobs:
         
         # changes the base-tag in index.html from '/' to 'TestBlazor4' to match GitHub Pages repository subdirectory
       - name: Change base-tag in index.html from / to TestBlazor4
-        run: sed -i 's/<base href="\/" \/>/<base href="\/TestBlazor4\/" \/>/g' release/wwwroot/index.html
+        run: sed -i 's/<base href="\/" \/>/<base href="\/TestBlazor4\/" \/>/g' wwwroot/index.html
         
         
         
