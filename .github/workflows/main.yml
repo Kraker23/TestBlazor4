@@ -23,4 +23,3 @@ jobs:
         run: dotnet pack --configuration Release <my project>
       - name: Publish the package to GPR
         run: dotnet nuget push <my project>/bin/Release/*.nupkg
-            if: ${{ always() }}
