@@ -5,9 +5,6 @@ on:
     branches: [ main ]
 
 jobs:
-    # add .nojekyll file to tell GitHub pages to not treat this as a Jekyll project. (Allow files and folders starting with an underscore)
-    - name: Add .nojekyll file
-      run: touch wwwroot/.nojekyll
   build:
 
     runs-on: ubuntu-latest
@@ -21,6 +18,8 @@ jobs:
         uses: actions/setup-dotnet@v2
         with:
           dotnet-version: ${{ matrix.dotnet-version }}
+          
+          
       # You can test your matrix by printing the current dotnet version
       - name: Display dotnet version
         run: dotnet --version
@@ -29,6 +28,11 @@ jobs:
       - name: Change base-tag in index.html from / to TestBlazor4
         run: sed -i 's/<base href="\/" \/>/<base href="\/TestBlazor4\/" \/>/g' release/wwwroot/index.html
         
+        
+        
+       # add .nojekyll file to tell GitHub pages to not treat this as a Jekyll project. (Allow files and folders starting with an underscore)
+      - name: Add .nojekyll file
+        run: touch wwwroot/.nojekyll
         
       - name: Commit wwwroot to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@3.7.1
