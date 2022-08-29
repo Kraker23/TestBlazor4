@@ -6,9 +6,7 @@ on:
 
 jobs:
   build:
-    params:
-        assets:
-            disableFingerprinting: true
+  
     runs-on: ubuntu-latest
     strategy:
       matrix:
