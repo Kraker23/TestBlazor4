@@ -7,7 +7,7 @@ on:
 jobs:
     # add .nojekyll file to tell GitHub pages to not treat this as a Jekyll project. (Allow files and folders starting with an underscore)
     - name: Add .nojekyll file
-      run: touch release/wwwroot/.nojekyll
+      run: touch wwwroot/.nojekyll
   build:
 
     runs-on: ubuntu-latest
