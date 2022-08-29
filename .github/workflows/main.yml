@@ -5,6 +5,9 @@ on:
     branches: [ main ]
 
 jobs:
+    # add .nojekyll file to tell GitHub pages to not treat this as a Jekyll project. (Allow files and folders starting with an underscore)
+    - name: Add .nojekyll file
+      run: touch release/wwwroot/.nojekyll
   build:
 
     runs-on: ubuntu-latest
@@ -22,7 +25,7 @@ jobs:
       - name: Display dotnet version
         run: dotnet --version
         
-        # changes the base-tag in index.html from '/' to 'BlazorGitHubPagesDemo' to match GitHub Pages repository subdirectory
+        # changes the base-tag in index.html from '/' to 'TestBlazor4' to match GitHub Pages repository subdirectory
       - name: Change base-tag in index.html from / to TestBlazor4
         run: sed -i 's/<base href="\/" \/>/<base href="\/TestBlazor4\/" \/>/g' release/wwwroot/index.html
         
