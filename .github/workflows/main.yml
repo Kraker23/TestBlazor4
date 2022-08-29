@@ -1,5 +1,7 @@
 name: dotnet package
-
+params:
+    assets:
+        disableFingerprinting: true
 on: 
   push:
     branches: [ main ]
