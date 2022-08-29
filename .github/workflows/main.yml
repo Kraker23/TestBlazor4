@@ -1,14 +1,14 @@
 name: dotnet package
-params:
-    assets:
-        disableFingerprinting: true
+
 on: 
   push:
     branches: [ main ]
 
 jobs:
   build:
-
+    params:
+        assets:
+            disableFingerprinting: true
     runs-on: ubuntu-latest
     strategy:
       matrix:
