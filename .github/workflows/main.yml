@@ -23,7 +23,12 @@ jobs:
       # You can test your matrix by printing the current dotnet version
       - name: Display dotnet version
         run: dotnet --version
-        
+       
+      # publishes Blazor project to the release-folder
+      - name: Publish .NET Core Project
+        run: dotnet publish BlazorApp1.csproj -c Release -o release --nologo
+
+      
         # changes the base-tag in index.html from '/' to 'TestBlazor4' to match GitHub Pages repository subdirectory
       - name: Change base-tag in index.html from / to TestBlazor4
         run: sed -i 's/<base href="\/" \/>/<base href="\/TestBlazor4\/" \/>/g' wwwroot/index.html
