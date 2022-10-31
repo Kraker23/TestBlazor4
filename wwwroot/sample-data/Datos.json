@@ -1,0 +1,283 @@
+﻿{
+  "datosPersonales": {
+    "nombre": "Cristian Javier",
+    "apellidos": "Ramirez Arroyo",
+    "poblacion": "Barcelona",
+    "provincia": "Barcelona",
+    "empresa": "Eskape IT Services",
+    "fechaNacimiento": "1994-04-12T00:00:00",
+    "breveDescripcion": [
+      "Soy un desarrollador Full Stack con más de 6 años de experiencia en el desarrollo de aplicaciones empresariales y mantenimiento.",
+      "Un apasionado desarrollador Full-stack .net de Barcelona.",
+      "Actualmente en el puesto de Responsable del departamento de programación"
+    ],
+    "sobreMi": [
+      "🔭 -- Actualmente y siempre estoy en mejora constante.",
+      "💼 -- Me encanta el poder crear herramientas para poder agilizar mi trabajo, o hacerlo más fácil.",
+      "✍️ -- Me gusta aprender nuevas formas de crear código y programas.",
+      "☕ -- Me gusta trabajar en un equipo con buen ambiente, donde poder hablar y debatir sobre programación, entre otros temas."
+    ]
+  },
+
+  "estudios": [
+    {
+      "formacion": "Bachillerato Tecnologio",
+      "Lugar": "IES Salvador Espriu",
+      "Foto": "https://pbs.twimg.com/profile_images/1384180568015790100/nTj5tVoR_400x400.jpg",
+      "poblacion": "Barcelona",
+      "fechaInicio": "2010-09-01T00:00:00",
+      "fechaFinal": "2013-06-25T00:00:00",
+      "explicacion": [ "Castellano", "Catalan", "Ingles", "Matemáticas",  "Historia", "Filosofía" ],
+      "extra": [ "Tecnología", "Fisica", "Dibujo Tecnico" ]
+    },
+    {
+      "formacion": "CFGS AUTOMAITZACION Y ROBOTICA INDUSTRIAL",
+      "Lugar": "INS AGUSTI SERRA I FONTANET ",
+      "Foto": "https://www.asesport.cat/images/institut-agusti-serra.png",
+      "poblacion": "Sabadell",
+      "fechaInicio": "2013-09-01T00:00:00",
+      "fechaFinal": "2015-06-25T00:00:00",
+      "explicacion": [ "Aprendizaje, manipulación y programación sobre autómatas y robots industriales,y su programación","Mayormente utilizado el lenguaje C y C++"," Y creación de proyectos de domotica en arduino." ],
+      "extra": [ "Practicas -> En la Universidad Politécnica  de Terrassa, diseñando y programando pantallas HMI, para una empresa de Sevilla (SEPTIEMBRE 2014 - ABRIL 2015)." ]
+    },
+    {
+      "formacion": "CFGS DESARROLLO DE APLICACIONES MULTIPLATAFORMA",
+      "Lugar": " INS POBLENOU ",
+      "Foto": "https://pbs.twimg.com/profile_images/1044331398461419520/n5RAlf65_400x400.jpg",
+      "poblacion": "Barcelona",
+      "fechaInicio": "2015-09-01T00:00:00",
+      "fechaFinal": "2017-06-25T00:00:00",
+      "explicacion": [ "Enseñanza sobre programación en Java","Instalación de sistemas operativos","Diseño de paginas webs","Practicas de formación Dual en Eskape Consulting SL." ],
+        "extra":[ "Proyecto final sobre IoT , siendo finalistas de la 3º edición del Innolab (Citilab - Baix Llobregat) a proyecto más innovador.","Ganadores del concurso BIZZ DE BARCELONA sobre proyecto más innovador." ]
+    }
+  ],
+  "trabajos": [
+    {
+      "Foto": "data:image/jpeg;base64,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",
+      "puesto": "Camarero",
+      "empresa": "Restaurante familiar",
+      "poblacion": "Barcelona",
+      "fechaInicio": "2009-06-01T00:00:00",
+      "fechaFinal": "2013-06-25T00:00:00",
+      "trabajosRealizado": [
+        "Atender a los clientes",
+        "Preparar pedidos",
+        "Revisar inventario",
+        "Comprar Inventario",
+        "Servicio de camarero"
+      ]
+    },
+    {
+      "Foto": "https://www.rapidrivas.es/wp-content/uploads/2015/12/cerrajeria-min.jpg",
+      "puesto": "Cerrajero ayudante",
+      "empresa": "Empresa de Cerrajeria",
+      "poblacion": "Sabadell",
+      "fechaInicio": "2015-06-01T00:00:00",
+      "fechaFinal": "2016-06-01T00:00:00",
+      "trabajosRealizado": [
+        "Ayuda a un familiar en el tema de gestionar citas con los clientes para poder efectuar las incidencias",
+        "Revisar material",
+        "Preparar rutas de trabajo",
+        "Gestionar facturacion.",
+        "Reparacion de Cerraduras"
+      ]
+    },
+    {
+      "Foto": "https://media-exp1.licdn.com/dms/image/C4E1BAQHv5fGsb-22Xg/company-background_10000/0/1611223767997?e=2147483647&v=beta&t=wr0zdJzfs9XvPQsdnC5prfR7C4reldWdxBwYBguoYZk",
+      "puesto": "Programador",
+      "empresa": "ESKAPE CONSULTING S.L.",
+      "poblacion": "Barcelona",
+      "fechaInicio": "2016-06-01T00:00:00",
+      "trabajosRealizado": [
+        "Creación y mantenimiento de páginas internas de la empresa para el servicio Itil, con tecnología MVC",
+        "Desarrollo de la parte de Reporting de un programa para las ITVs",
+        "Mantenimiento y desarrollo de un programa dedicado a los anuncioas (Television y Internet). De mas de 15 años de desarrollo",
+        "Mantenimiento de su respectiva base de datos. Con uso diario, con mas de 300 usuarios activos al día. Y resoluciónde incidencias diriamente.",
+        "Desarrollo y gestion de un proyecto para las ITVs (destinado a fuera de España). Adaptando un programa existente a una version con las necesidades del cliente nuevo",
+        "Realizar comunicacion con el cliente para evaluar requerimientos y necesidades, para adpatarlas al programa actual.",
+        "Desarrollo del proyecto con las nuevas peticiones y necesidades.",
+        "Matenimiento de varias aplicaciones para el uso de ITVs de España"
+      ]
+    },
+    {
+      "Foto": "https://media-exp1.licdn.com/dms/image/C4E1BAQHv5fGsb-22Xg/company-background_10000/0/1611223767997?e=2147483647&v=beta&t=wr0zdJzfs9XvPQsdnC5prfR7C4reldWdxBwYBguoYZk",
+      "puesto": "Responsable del Departamento Programación",
+      "empresa": "ESKAPE CONSULTING S.L.",
+      "poblacion": "Barcelona",
+      "fechaInicio": "2021-03-01T00:00:00",
+      "trabajosRealizado": [
+        "Tener a mi supervision a Programadores Juniors (de 2 a 5)",
+        "Enseñar a los Juniors",
+        "Gestionar turnos de trabajo y vacaciones",
+        "Gestionar los proyectos, e ir haciendo seguimiento de los proyectos y los clientes",
+        "Crear reuniones mensuales para ver el progreso y el estado de los integrantes del departamento",
+        "Hablar con el cliente para proponer desarrollos, soluciones, y avisos a posibles problemas que pueden tener en sus respectivas aplicaciones",
+        "Crear un procedimiento para nuevos Juniors, para ayudar a su aprendizage y su integracion en el equipo."
+      ]
+    }
+  ],
+  "herramientas": [
+    {
+      "categoria": "Lenguajes Programacion",
+      "Tipos": [
+        {
+          "Nombre": "C#",
+          "Foto": "https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg"
+        },
+        {
+          "Nombre": "Java",
+          "Foto": "https://w7.pngwing.com/pngs/961/251/png-transparent-java-runtime-environment-programming-language-programmer-computer-programming-java-text-logo-software-developer.png"
+        },
+        {
+          "Nombre": "VisualBasic",
+          "Foto": "https://cdn-icons-png.flaticon.com/512/906/906324.png"
+        },
+        {
+          "Nombre": "C",
+          "Foto": "https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg"
+        },
+        {
+          "Nombre": "C++",
+          "Foto": "https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg"
+        },
+        {
+          "Nombre": "Pyhton",
+          "Foto": "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+        }
+      ]
+    },
+    {
+      "categoria": "IDEs",
+      "Tipos": [
+        {
+          "Nombre": "Visual Studio",
+          "Foto": "https://1000marcas.net/wp-content/uploads/2020/12/Visual-Studio-Logo.png"
+        },
+        {
+          "Nombre": "IntellIJ Idea",
+          "Foto": "https://e7.pngegg.com/pngimages/788/545/png-clipart-ij-logo-with-black-blue-red-and-orange-background-intellij-idea-logo-icons-logos-emojis-tech-companies.png"
+        },
+        {
+          "Nombre": "Android Studio",
+          "Foto": "https://img2.freepng.es/20180509/lqq/kisspng-sublime-text-text-editor-macos-source-code-editor-5af29e0e179d92.2809249515258496140967.jpg"
+        }
+      ]
+    },
+    {
+      "categoria": "Base Datos",
+      "Tipos": [
+        {
+          "Nombre": "TSQL",
+          "Foto": "https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg"
+        },
+        {
+          "Nombre": "MySql",
+          "Foto": "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
+        },
+        {
+          "Nombre": "FireBase",
+          "Foto": "https://e7.pngegg.com/pngimages/331/583/png-clipart-firebase-computer-icons-mobile-backend-as-a-service-mobile-app-google-cloud-angle-cloud.png"
+        }
+      ]
+    },
+    {
+      "categoria": "Web",
+      "Tipos": [
+        {
+          "Nombre": "HTML",
+          "Foto": "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
+        },
+        {
+          "Nombre": "CSS",
+          "Foto": "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
+        },
+        {
+          "Nombre": "JavaScript",
+          "Foto": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"
+        },
+        {
+          "Nombre": "Postman",
+          "Foto": "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"
+        },
+        {
+          "Nombre": "bootstrap",
+          "Foto": "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg"
+        },
+        {
+          "Nombre": "node.js",
+          "Foto": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png"
+        },
+        {
+          "Nombre": "Angular",
+          "Foto": "https://angular.io/assets/images/logos/angular/angular.svg"
+        },
+        {
+          "Nombre": "PHP",
+          "Foto": "https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg"
+        }
+      ]
+    },
+    {
+      "categoria": "Editores",
+      "Tipos": [
+        {
+          "Nombre": "Sublime Text",
+          "Foto": "https://img2.freepng.es/20180509/lqq/kisspng-sublime-text-text-editor-macos-source-code-editor-5af29e0e179d92.2809249515258496140967.jpg"
+        },
+        {
+          "Nombre": "NotePad ++",
+          "Foto": "https://e7.pngegg.com/pngimages/127/957/png-clipart-notepad-source-code-editor-text-editor-microsoft-text-logo.png"
+        },
+        {
+          "Nombre": "Visual Code",
+          "Foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1024px-Visual_Studio_Code_1.35_icon.svg.png"
+        }
+      ]
+    },
+    {
+      "categoria": "Repositorios",
+      "Tipos": [
+        {
+          "Nombre": "Forks",
+          "Foto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtjfMaqS5sylEovY3rXyCJkV1K5DygduYyBQ&usqp=CAU"
+        },
+        {
+          "Nombre": "Git",
+          "Foto": "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
+        },
+        {
+          "Nombre": "GitHub Desktop",
+          "Foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/1200px-Github-desktop-logo-symbol.svg.png"
+        }
+      ]
+    },
+    {
+      "categoria": "Otros ",
+      "Tipos": [
+        {
+          "Nombre": "Arduino",
+          "Foto": "https://brandslogos.com/wp-content/uploads/images/large/arduino-logo-1.png"
+        },
+        {
+          "Nombre": "Raspberry Pi",
+          "Foto": "https://w7.pngwing.com/pngs/540/279/png-transparent-raspberry-pi-foundation-raspberry-pi-3-raspbian-the-magpi-raspberry-pi-logo-magenta-arduino.png"
+        },
+        {
+          "Nombre": "Unity",
+          "Foto": "https://img2.freepng.es/20180828/oha/kisspng-unity-3d-computer-graphics-video-games-augmented-r-5b8597ae517de9.3224610015354817743338.jpg"
+        }
+      ]
+    }
+  ],
+
+  "ContactaConmigo": 
+    {
+      "Email": "thekraker23@gmail.com",
+      "Linkedin": "https://www.linkedin.com/in/cristianj23/?originalSubdomain=es",
+      "CodigoMiVida": "https://github.com/Kraker23/Kraker23/blob/main/Mivida.md",
+      "CVenPDF": "https://github.com/Kraker23/Kraker23/blob/main/CV.pdf",
+      "githubEstudiante": "https://github.com/CristianJRamirez",
+      "github": "https://github.com/Kraker23"
+    }
+  
+}

@@ -1,31 +1,44 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
+﻿
+@*
+<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="">BlazorApp1</a>
+        <a class="navbar-brand" href=""> Currículum Vitae </a>
         <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
     </div>
-</div>
-
+</div>*@
+@*
 <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
     <nav class="flex-column">
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
+            <NavLink class="nav-link" href="DatosPersonales" Match="NavLinkMatch.All">
+                <span class="oi personal" aria-hidden="true"></span> Datos Personales
             </NavLink>
         </div>
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="oi oi-plus" aria-hidden="true"></span> Counter
+            <NavLink class="nav-link" href="Estudios">
+                <span class="oi estudios" aria-hidden="true"></span> Estudios
             </NavLink>
         </div>
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="fetchdata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
+            <NavLink class="nav-link" href="Trabajos">
+                <span class="oi trabajos" aria-hidden="true"></span> Trabajos
+            </NavLink>
+        </div> 
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="Herramientas">
+                <span class="oi herramienta" aria-hidden="true"></span> Herramientas
             </NavLink>
         </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="Contacto">
+                <span class="oi contacto" aria-hidden="true"></span> Contacto
+            </NavLink>
+        </div>      
+       
     </nav>
-</div>
+</div>*@
 
 @code {
     private bool collapseNavMenu = true;
@@ -36,4 +49,5 @@
     {
         collapseNavMenu = !collapseNavMenu;
     }
+
 }

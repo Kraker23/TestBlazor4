@@ -1,13 +1,20 @@
 ﻿@inherits LayoutComponentBase
 
 <div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
-
     <main>
-        <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+         
+        <div class="top-row px-8" style="height:80px;">
+
+            <RadzenCard Style="margin: 0px; width: fit-content;padding: 0px;" Class=" mx-auto">  
+            <RadzenText TextStyle="TextStyle.H2" style="text-align:center;color:dodgerblue;margin: 0px;padding: 0px;"  TagName="TagName.H2">Cristian Javier Ramirez</RadzenText>
+            <RadzenMenu Click="OnParentClicked" >                    
+                <RadzenMenuItem Text="Datos Personales" Path="/" Icon="account_box"></RadzenMenuItem>
+                <RadzenMenuItem Text="Estudios" Path="Estudios" Icon="menu_book"></RadzenMenuItem>
+                <RadzenMenuItem Text="Trabajos" Path="Trabajos" Icon="work"></RadzenMenuItem>
+                <RadzenMenuItem Text="Herramientas" Path="Herramientas" Icon="handyman"></RadzenMenuItem>
+                <RadzenMenuItem Text="Contacto" Path="Contacto" Icon="contact_mail"></RadzenMenuItem>
+            </RadzenMenu>
+        </RadzenCard>
         </div>
 
         <article class="content px-4">
@@ -15,3 +22,17 @@
         </article>
     </main>
 </div>
+
+@code {
+
+
+    void OnParentClicked(MenuItemEventArgs args)
+    {
+
+    }
+
+    void OnChildClicked(MenuItemEventArgs args)
+    {
+
+    }
+}

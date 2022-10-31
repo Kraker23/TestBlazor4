@@ -1,0 +1,78 @@
+﻿@page "/Estudios"
+@inject HttpClient Http
+<PageTitle>Estudios</PageTitle>
+
+<h1>Estudios</h1>
+
+@if (datos?.estudios == null)
+{
+    <p><em>Loading...</em></p>
+    <RadzenProgressBar  ProgressBarStyle="ProgressBarStyle.Success" Value="100" ShowValue="false" Mode="ProgressBarMode.Indeterminate" />
+}
+else
+{
+    @*<RadzenDataGrid TItem="Estudio" Data="@data">
+        <Columns>
+            <RadzenDataGridColumn TItem="Estudio" Property="formacion" Title="Formacion" Width="250px" />
+            <RadzenDataGridColumn TItem="Estudio" Property="Lugar" Title="Lugar" Width="200px" />
+            <RadzenDataGridColumn TItem="Estudio" Property="poblacion" Title="Poblacion" Width="100px" />
+            <RadzenDataGridColumn TItem="Estudio" Property="fechaInicio" Title="Fecha Inicio" FormatString="{0:MM/dd/yyyy}" Width="100px" />
+            <RadzenDataGridColumn TItem="Estudio" Property="fechaFinal" Title="Fecha Final" FormatString="{0:MM/dd/yyyy}" Width="100px" />
+            <RadzenDataGridColumn TItem="Estudio" Property="explicacion" Title="Explicacion"  />
+            <RadzenDataGridColumn TItem="Estudio" Property="extra" Title="Extra" />
+        </Columns>
+    </RadzenDataGrid>*@
+
+
+    <RadzenDataList WrapItems="true" AllowPaging="false" Data="@data" TItem="Estudio">
+        <Template Context="estudio">
+            <RadzenCard Style="width:300px;">
+                <div class="d-flex flex-row align-items-center">
+                    <RadzenImage Path="@estudio.Foto" Class="rounded-circle float-left mr-3" Style="width: 80px; height: 80px;" />
+                    <div>
+                        <h4 class="mb-0">@(estudio.formacion)</h4>
+                        <div>@estudio.Lugar</div>
+                        <div style="font-size: .8em">@(estudio.poblacion), @(estudio.fechaInicio.ToString("dd/MM/yyyy")) - @(estudio.fechaFinal.ToString("dd/MM/yyyy"))</div>
+                    </div>
+                </div>
+                <hr style="border:solid ; background-color: black; height: 0px; " />
+                <div class="row"> 
+                     <p style="text-decoration-line:underline">Enseñanza :</p>
+                    <div > <ul>
+                        @*<b>@(estudio.explicacion )</b>*@
+                        @foreach (string item in estudio.explicacion)
+                            {
+                                <li> <RadzenText TextStyle="TextStyle.Body1"><b>@(item)</b></RadzenText></li>
+                        }</ul>
+                    </div>
+                </div>
+                <hr style="border:solid ; background-color: black; height: 0px; " />
+                <div class="row">
+                    <p style="text-decoration-line:underline">Extra : </p>
+                    <div >  <ul>
+                        @foreach (string item in estudio.extra)
+                        {
+                                <li> <RadzenText TextStyle="TextStyle.Body1"><b>@(item)</b></RadzenText></li>
+                        }  </ul>
+                    </div>
+                </div>
+            </RadzenCard>
+        </Template>
+    </RadzenDataList>
+    
+}
+
+@code {
+    private datosCV? datos;
+    public List<Estudio> data = new List<Estudio>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        datos = await Http.GetFromJsonAsync<datosCV>("sample-data/Datos.json");
+        if (datos!=null && datos.estudios !=null && datos.estudios.Count>0)
+        {
+            data = datos.estudios;
+        }
+    }
+   
+}

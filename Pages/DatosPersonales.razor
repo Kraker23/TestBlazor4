@@ -1,0 +1,109 @@
+﻿@page "/"
+@inject HttpClient Http
+<PageTitle>Datos Personales</PageTitle>
+
+<h1>Datos Personales</h1>
+
+<style>
+    .row {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center; /* for centering 3 blocks in the center */
+        /* justify-content: space-between; for space in between */
+    }
+
+    .block {
+        width: 800px;
+        height: 400px;
+        margin: 10px auto;
+    }
+</style>
+@if (datos?.datosPersonales == null)
+{
+    <p><em>Loading...</em></p>
+    <RadzenProgressBar ProgressBarStyle="ProgressBarStyle.Success" Value="100" ShowValue="false" Mode="ProgressBarMode.Indeterminate" />
+}
+else
+{
+
+    <div class="row">
+        <div class="block" style="width:500px ">
+            <RadzenCard Class="m-3">
+                <div class="d-flex flex-row p-3">
+
+                    <RadzenImage Path="Imagenes/foto.png" Class="rounded-circle float-start me-3" Style="width: 100px; height: 100px;" />
+                    @*<RadzenImage Path="https://raw.githubusercontent.com/devSouvik/devSouvik/master/gif3.gif" Class="rounded-circle float-start me-3" Style="width: 100px; height: 100px;" />*@
+                    <div>
+                        <RadzenText TextStyle="TextStyle.Overline" Class="d-flex mt-1 mb-0">Nombre y Apellidos</RadzenText>
+                        <RadzenText TextStyle="TextStyle.Body1"><b>@(datos.datosPersonales.nombre + " " + datos.datosPersonales.apellidos)</b></RadzenText>
+                        <RadzenText TextStyle="TextStyle.Overline" Class="d-flex mt-3 mb-0">Empresa Actual</RadzenText>
+                        <RadzenText TextStyle="TextStyle.Body1"><b>@datos.datosPersonales.empresa</b></RadzenText>
+                    </div>
+                </div>
+                <RadzenCard Class="my-3 rz-background-color-primary-lighter rz-shadow-0 rz-border-radius-0" style="margin: 0 calc(-1 * var(--rz-card-padding)); padding: 2rem;">
+                    <RadzenText TextStyle="TextStyle.H6" Class="rz-color-primary-light"><strong>Información Adicional</strong></RadzenText>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <RadzenText TextStyle="TextStyle.Overline" Class="rz-color-primary-light d-flex mt-3 mb-0">Provincia</RadzenText>
+                            <RadzenText TextStyle="TextStyle.Body1"><b>@(datos.datosPersonales.provincia)</b></RadzenText>
+                            <RadzenText TextStyle="TextStyle.Overline" Class="rz-color-primary-light d-flex mt-3 mb-0">Poblacion</RadzenText>
+                            <RadzenText TextStyle="TextStyle.Body1"><b>@(datos.datosPersonales.poblacion)</b></RadzenText>
+                        </div>
+                        <div class="col-md-8">
+                            <RadzenText TextStyle="TextStyle.Overline" Class="rz-color-primary-light d-flex mt-3 mb-0">Fecha Nacimiento</RadzenText>
+                            <RadzenText TextStyle="TextStyle.Body1"><b>@(datos.datosPersonales.fechaNacimiento.ToShortDateString())</b></RadzenText>
+                        </div>
+                    </div>
+                </RadzenCard>
+            </RadzenCard>
+        </div>
+
+        <div class="block" style="width:1300px ">
+            <RadzenCard Class="m-3">
+
+                <RadzenCard Class="my-3 rz-background-color-primary-lighter rz-shadow-0 rz-border-radius-0" style="margin: 0 calc(-1 * var(--rz-card-padding)); padding: 2rem;">
+                    <RadzenText TextStyle="TextStyle.H6" Class="rz-color-primary-light"><strong>Quien Soy?</strong></RadzenText>
+                    <div class="row">
+                        <div class="col-md-14">
+                            @*<RadzenText TextStyle="TextStyle.Body1"><b>@(datos.datosPersonales.breveDescripcion)</b></RadzenText>*@
+                            @foreach (string item in datos.datosPersonales.breveDescripcion)
+                            {
+                                <RadzenText TextStyle="TextStyle.Body1"><b>@(item)</b></RadzenText>
+                            }
+                        </div>
+                    </div>
+                </RadzenCard>
+                <RadzenCard Class="my-3 rz-background-color-primary-lighter rz-shadow-0 rz-border-radius-0" style="margin: 0 calc(-1 * var(--rz-card-padding)); padding: 2rem;">
+                    <RadzenText TextStyle="TextStyle.H6" Class="rz-color-primary-light"><strong>👨🏻‍💻 Sobre Mi</strong></RadzenText>
+                    <div class="row">
+                        <div class="col-md-14">
+                            @foreach (string item in datos.datosPersonales.sobreMi)
+                            {
+                                <RadzenText TextStyle="TextStyle.Body1"><b>@(item)</b></RadzenText>
+                            }
+                        </div>
+                    </div>
+                </RadzenCard>
+            </RadzenCard>
+        </div>
+    </div>
+
+
+    <SurveyPrompt Title="Que te parece?" />
+
+
+}
+@code {
+    private datosCV? datos;
+    public List<string> imagenes;
+    protected override async Task OnInitializedAsync()
+    {
+        imagenes = new List<string>();
+        imagenes.Add("🔭");
+        imagenes.Add("💼");
+        imagenes.Add("✍️");
+        imagenes.Add("☕");
+        datos = await Http.GetFromJsonAsync<datosCV>("sample-data/Datos.json");
+    }
+}

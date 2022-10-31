@@ -1,0 +1,87 @@
+﻿@page "/Herramientas"
+@inject HttpClient Http
+
+<PageTitle>Herramientas</PageTitle>
+
+<h1>Herramientas</h1>
+
+<style>
+    .row {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center; /* for centering 3 blocks in the center */
+        /* justify-content: space-between; for space in between */
+    }
+
+
+    .block {
+        width: 500px;
+        height: 400px;
+        margin: 10px auto;
+    }
+</style>
+@if (data == null)
+{
+    <p><em>Loading...</em></p>
+    <RadzenProgressBar  ProgressBarStyle="ProgressBarStyle.Success" Value="100" ShowValue="false" Mode="ProgressBarMode.Indeterminate" />
+}
+else
+{<div class="row">
+     @foreach (Herramienta herramienta in data)
+    {
+        <div class="block"style="width:400px ">
+        <RadzenCard style="max-width: 400px;color:white;">
+            <RadzenText TextStyle="TextStyle.DisplayH5" TagName="TagName.H5" Style=" color:black;">
+                @herramienta.categoria
+            </RadzenText>
+            <RadzenTree Style="width: 100%; height: fit-content;color:black;" AllowCheckChildren=false AllowCheckBoxes=false AllowCheckParents=false>
+               @foreach (Tipo tipo in herramienta.Tipos)
+            {
+                    <RadzenTreeItem Text="@tipo.Nombre">
+                        <Template>
+                    <img src="@tipo.Foto" style="width: 20px; margin-right: 8px;" />
+                    <b>@context.Text</b>
+                </Template>
+                    </RadzenTreeItem>
+                }
+            </RadzenTree>
+            </RadzenCard>
+        </div>
+    
+            }
+            </div>
+
+    @*@foreach (Herramienta herramienta in data)
+    {
+        <ul>
+            <h4>@herramienta.categoria</h4>
+            @foreach (Tipo tipo in herramienta.Tipos)
+            {
+                <li>
+                    <div class="divImg" style="background: url('@tipo.Foto') ;">
+                        
+                    </div><p>@tipo.Nombre</p>
+                    
+                </li>
+            }
+
+        </ul>
+    }*@
+
+
+
+}
+@code {
+    private datosCV? datos;
+    public List<Herramienta> data = new List<Herramienta>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        datos = await Http.GetFromJsonAsync<datosCV>("sample-data/Datos.json");
+        if (datos != null && datos.herramientas != null && datos.herramientas.Count > 0)
+        {
+            data = datos.herramientas;
+        }
+    }
+}

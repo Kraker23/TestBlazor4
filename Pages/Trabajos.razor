@@ -1,0 +1,57 @@
+﻿@page "/Trabajos"
+@inject HttpClient Http
+<PageTitle>Trabajos</PageTitle>
+
+<h1>Trabajos</h1>
+
+@if (datos?.trabajos == null)
+{
+    <p><em>Loading...</em></p>
+    <RadzenProgressBar  ProgressBarStyle="ProgressBarStyle.Success" Value="100" ShowValue="false" Mode="ProgressBarMode.Indeterminate" />
+}
+else
+{ 
+
+    <RadzenDataList WrapItems="true" AllowPaging="false" Data="@data" TItem="Trabajo">
+        <Template Context="trabajo">
+            <RadzenCard Style="width:300px;">
+                <div class="d-flex flex-row align-items-center">
+                    <RadzenImage Path="@trabajo.Foto" Class="rounded-circle float-left mr-3" Style="width: 80px; height: 80px;" />
+                    <div>
+                    <h4 class="mb-0">@(trabajo.puesto)</h4>
+                    <div>@trabajo.empresa</div>
+                        <div style="font-size: .8em">@(trabajo.poblacion), @(trabajo.fechaInicio.ToString("dd/MM/yyyy")) - (@trabajo.fechaFinal!=null ? @(trabajo.fechaFinal.ToString("dd/MM/yyyy")): "Aqui sigo :D")</div>
+                    </div>
+                </div>
+                <hr style="border:solid ; background-color: black; height: 0px; " />
+                <div class="row">
+                    <p style="text-decoration-line:underline">Trabajos Realizados :</p>
+                    <div>
+                    <ul>
+                            @for (int i = 0; i < trabajo.trabajosRealizado.Count; i++)
+                        {
+                                <li>@trabajo.trabajosRealizado[i]</li>
+                        }
+                        </ul>
+                    </div>
+                </div>
+               
+            </RadzenCard>
+        </Template>
+    </RadzenDataList>
+}
+
+@code {
+    private datosCV? datos;
+    public List<Trabajo> data = new List<Trabajo>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        datos = await Http.GetFromJsonAsync<datosCV>("sample-data/Datos.json");
+        if (datos != null && datos.trabajos != null && datos.trabajos.Count > 0)
+        {
+            data = datos.trabajos;
+        }
+    }
+
+}
